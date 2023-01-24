@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: rgb(160, 180, 220);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgb(24, 32, 48) 35%,
+        rgb(88, 121, 185) 100%
+    );
+}
+
+section div {
+    position: absolute;
+    bottom: -50px;
+    background: transparent;
+    border-radius: 50%;
+
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: animate 10s linear infinite;
+    transition: all 0.1s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-2800%);
+        opacity: 1;
+    }
+}
+
+.explode {
+    background-color: #fff2;
+    opacity: 0 !important;
+}
+
+.bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    gap: 10px;
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    z-index: 5;
+}
+
+.bar div {
+    border-radius: 25%;
+    height: 110px;
+    width: 110px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.bar div:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.bar div img {
+    width: 90%;
+}
+
+.bar div:hover img {
+    width: 100%;
+}
+
+.poisson {
+    position: absolute;
+    transition: 2.5s;
+}
